@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 2 Uso de tables</title>
+    </head>
+    <style>
+        /* CSS general de la pagina*/
+        
+        .Table_1 {
+            border: 1px solid black;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .TD_1:hover {
+            background-color: aqua;
+        }
+        
+        td {
+            border: 1px solid black;
+        }
+    </style>
+    <script type="text/javascript">
+        function InsertarEntrada(){
+            document.getElementById('Entradas').innerHTML +=
+            `<div style=" text-align: left; border:0.2rem solid; width:42%;">
+                            <p style="margin-left:2rem;" id="OpCorreo">Correo: `+ 
+                                document.getElementById('email').value+`</p>
+                            <p style="margin-left:2rem;" >Comentario: `+ 
+                                document.getElementById('Comentarios').value+`</p>
+                        </div>`
+        }
+    </script>
+    <body>
+        <header class="Titulo">
+            <h1>Blog de Tecnologia</h1>
+        </header>
+        <main>
+            <table class="Table_1">
+                <thead>
+                    Generar imagenes inteligencia artificial
+                </thead>
+                <tr>
+                    <td class="TD_1">Navegacion</td>
+                    <td class="TD_1">Nueva entrada</td>
+                    <td class="TD_1">Temas de interes</td>
+                    <td class="TD_1">Patrocinadores</td>
+                    <td class="TD_1">Futuros blogs</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">
+                        <table>
+                            <tr>
+                                <td class="TD_1">Negocios</td>
+                            </tr>
+                            <tr>
+                                <td class="TD_1">Tecnologia</td>
+                            </tr>
+                            <tr>
+                                <td class="TD_1">Inversiones</td>
+                            </tr>
+                            <tr>
+                                <td class="TD_1">Internacionales</td>
+                            </tr>
+                            <tr>
+                                <td class="TD_1">Innovacion</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="text-align: left;" colspan="4">
+                        <img style="width: auto; height: auto;" src="./img/autor.jpg" alt="Josue Jimenez">
+                        <p>
+                            Vestibulum posuere rhoncus hendrerit. Aenean at nisl vitae ipsum blandit molestie. Aenean id est a diam tincidunt varius rhoncus vitae ipsum. Sed lacinia ex vitae urna ultrices dapibus. Ut sagittis metus eget arcu posuere cursus. Curabitur pulvinar, orci
+                            dictum congue placerat, tortor ante fringilla neque, a egestas urna ex at turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse urna enim, pulvinar sit amet gravida ut,
+                            lacinia et metus. Nunc vestibulum elit ut facilisis dictum. Mauris lacinia ligula eu malesuada congue. Sed vehicula eget lorem ac sodales. Integer in sollicitudin tellus. Sed quis cursus ipsum. Nunc id lobortis justo. Aenean tincidunt
+                            ut urna a lacinia. Morbi quis tellus a ex lacinia ullamcorper. Sed viverra ornare dui, convallis vehicula diam. Proin consequat ligula a urna malesuada tincidunt. Cras vitae malesuada nisi, euismod aliquet dui. Phasellus dignissim
+                            et sem id fringilla. Donec non tempor sapien. Maecenas mollis scelerisque dictum. Vivamus mi eros, finibus hendrerit aliquet in, gravida sed elit. Vivamus egestas ligula sit amet libero porta rhoncus. Sed ornare nibh eget scelerisque
+                            iaculis. Pellentesque auctor, neque tempus pharetra tristique, massa felis venenatis erat, ac tempor turpis nulla quis justo. Praesent rutrum elit enim, vel vulputate arcu tempor sed. Vivamus vel dui ut lacus commodo tempor non
+                            eu diam. Morbi placerat elit sit amet tempus vestibulum. Quisque id commodo sem. Duis nec malesuada sem. Proin rhoncus ante lacus, vitae ullamcorper eros vestibulum ut.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" style="font-size: 1.5 rem;">
+                        <fieldset style="width: 40%; text-align: left;">
+                            <p>Correo Electronico:</p>
+                            <input id="email" type="email" placeholder="Correo electronico">
+                            <p>Comentarios:</p>
+                            <textarea id="Comentarios" rows="6" cols="60" placeholder="Ingrese sus comentarios"></textarea>
+                            <p>
+                                <input type="button" value="Enviar" onclick="InsertarEntrada();">
+                            </p>
+                        </fieldset>
+                        <div id="Entradas" >
+                            <div style=" text-align: left; border:0.2rem solid; width:42%;">
+                                <p style="margin-left:2rem;" id="OpCorreo">Correo: lissygarcia06@unitec.edu</p>
+                                <p style="margin-left:2rem;" >La inteligencia artificial vino para quedarse</p>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                        <h2>Derechos reservados programacion IV web</h2>
+                    </td>
+                </tr>
+            </table>
+        </main>
+    </body>
+
+</html>
